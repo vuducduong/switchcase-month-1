@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>month</title>
+</head>
+<body>
+<h1 style="color: red">Tính ngày của tháng trong năm</h1>
+<input type="text" id="lext">
+<button type="button" onclick="dayOfmonth()">Tính số ngày</button>
+<p id="month"></p>
+<script>
+    function dayOfmonth() {
+        let dayByday = +document.getElementById('lext').value;
+        switch (dayByday) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('month').innerHTML = 'Tháng  ' + dayByday + ' có 31 ngày';
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('month').innerHTML = 'Tháng  ' + dayByday + ' có 30 ngày';
+                break;
+            case 2:
+                document.getElementById('month').innerHTML = 'Tháng ' + dayByday + ' có 28 hoặc 29 ngày';
+                break;
+            default:
+                document.getElementById('month').innerHTML = 'Bạn đã nhập sai vui lòng nhập lại';
+        }
+    }
+</script>
+</body>
+</html>
